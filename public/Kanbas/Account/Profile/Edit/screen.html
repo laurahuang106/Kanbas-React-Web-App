@@ -1,0 +1,24 @@
+<table>
+  <tbody>
+    <tr>
+      <td valign="top" id="kanbasNavigation"></td>
+      <td valign="top" id="accountNavigation"></td>
+      <td valign="top" id="profileEdit"></td>
+    </tr>
+  </tbody>
+</table>
+
+<script>
+  function includeHTML(filePath, elementId) {
+    fetch(filePath)
+      .then((response) => response.text())
+      .then((text) => (document.getElementById(elementId).innerHTML = text))
+      .catch((error) =>
+        console.error("Error loading " + elementId + ":", error)
+      );
+  }
+
+  includeHTML("../../../Navigation/index.html", "kanbasNavigation");
+  includeHTML("../../Navigation/index.html", "accountNavigation");
+  includeHTML("./index.html", "profileEdit");
+</script>
