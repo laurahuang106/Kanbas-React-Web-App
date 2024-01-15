@@ -6,136 +6,183 @@
 <button><a href="../Integrations/screen.html">Integrations</a></button>
 
 <h2>Course Details</h2>
-<h4>Image:</h4>
-<input type="file" id="image" name="image" />
-
-<h4>Name:</h4>
-<p>CS4550 12631 Web Development SEC 01 Fall 2023 [BOS-1-TR]</p>
-
-<h4>Course Code:</h4>
-<p>CS4550.12631.202410</p>
-
-<h4>Blueprint Course:</h4>
-<p>No</p>
-
-<h4>Course Template:</h4>
-<input type="checkbox" id="course-template" name="course-template" />
-<label for="course-template" class="checkbox-label"
-  >Enable course as a Course Template</label
->
-<br /><br />
-
-<h4>Time Zone:</h4>
-<select id="time-zone" name="time-zone">
-  <option value="ET">Eastern Time (US & Canada) -05:00/-04:00</option>
-</select>
-
-<h4>SIS ID:</h4>
-<p>CS4550.12631.202410</p>
-
-<h4>Subaccount:</h4>
-<p>CS Undergrad</p>
-
-<h4>Term:</h4>
-<p>202410_1 Fall 2023 Semester Full Term</p>
-
-<h4>Participation:</h4>
-<select id="participation" name="participation">
-  <option value="term">Term</option>
-</select>
-<p>Couse participation is limited to term start and end date</p>
-<label for="start-date">Start</label><br />
-<input type="date" class="date-input" id="start-date" name="start-date" /><br />
-<label for="end-date">End</label><br />
-<input
-  type="date"
-  class="date-input"
-  id="end-date"
-  name="end-date"
-/><br /><br />
-
-<label
-  ><input type="checkbox" name="restrict_before_start" /> Restrict students from
-  viewing course before term start date</label
-><br />
-<label
-  ><input type="checkbox" name="restrict_after_end" /> Restrict students from
-  viewing course after term end date</label
-><br />
-
-<h4>Default due time:</h4>
-<select name="default_due_time" id="default_due_time">
-  <option value="11:59pm">Account default (11:59pm)</option>
-</select>
-<p>
-  This influences the user interface for setting due dates. lt does not change
-  the timedue for any existing assignments.
-</p>
-
-<h4>Language:</h4>
-<select name="language" id="language">
-  <option value="english">
-    Not set (user-configurable, defaults to English)
-  </option>
-</select>
-<p>
-  This will override any user/system language preferences. This is only
-  recommendedfor foreign language courses
-</p>
-
-<h4>File Storage:</h4>
-<p>10000 megabytes</p>
-
-<h4>Large Course:</h4>
-<label
-  ><input type="checkbox" name="large_course" />Launch speedgrader Filtered by
-  Student Group</label
->
-
-<h4>Grading Scheme:</h4>
-<label
-  ><input type="checkbox" name="grading_scheme" />Enable course grading
-  scheme</label
->
-
-<h4>License:</h4>
-<select name="license">
-  <option value="private">Private (Copyrighted)</option>
-</select>
-
-<h4>File Copyright:</h4>
-<label
-  ><input type="checkbox" name="file_copyright" /> Copyright and license
-  information must be provided for files before they are published.</label
->
-
-<h4>Visibility:</h4>
-<p>
-  If you need to make your course public please contact your
-  administrator/support.
-</p>
-<select name="visibility">
-  <option value="course">Course</option>
-</select>
-<label
-  ><input type="checkbox" name="include_course" /> Include this course in the
-  public course index</label
->
-
-<h4>Format:</h4>
-<select name="format">
-  <option value="on-campus">On-Campus</option>
-</select>
-
-<h4>Mastery Paths:</h4>
-<label
-  ><input type="checkbox" name="mastery_paths" /> Enable individual learning
-  paths for students based on assessment</label
->
-
-<h4>Description:</h4>
-<textarea name="description" rows="5" cols="50"></textarea>
-
-<p><a href="#">more options</a></p>
-
-<button><a href="./screen.html">Update Course Details</a></button>
+<table>
+  <tr valign="top">
+    <td><h4>Image:</h4></td>
+    <td><input type="file" id="image" name="image" /></td>
+  </tr>
+  <tr valign="top">
+    <td><h4>Name:</h4></td>
+    <td><p>CS4550 12631 Web Development SEC 01 Fall 2023 [BOS-1-TR]</p></td>
+  </tr>
+  <tr valign="top">
+    <td><h4>Course Code:</h4></td>
+    <td><p>CS4550.12631.202410</p></td>
+  </tr>
+  <tr valign="top">
+    <td><h4>Blueprint Course:</h4></td>
+    <td><p>No</p></td>
+  </tr>
+  <tr valign="top">
+    <td><h4>Course Template:</h4></td>
+    <td>
+      <input type="checkbox" id="course-template" name="course-template" />
+      <label for="course-template">Enable course as a Course Template</label>
+    </td>
+  </tr>
+  <tr valign="top">
+    <td><h4>Time Zone:</h4></td>
+    <td>
+      <select id="time-zone" name="time-zone">
+        <option value="ET">Eastern Time (US & Canada) -05:00/-04:00</option>
+      </select>
+    </td>
+  </tr>
+  <tr valign="top">
+    <td><h4>SIS ID:</h4></td>
+    <td><p>CS4550.12631.202410</p></td>
+  </tr>
+  <tr valign="top">
+    <td><h4>Subaccount:</h4></td>
+    <td><p>CS Undergrad</p></td>
+  </tr>
+  <tr valign="top">
+    <td><h4>Term:</h4></td>
+    <td><p>202410_1 Fall 2023 Semester Full Term</p></td>
+  </tr>
+  <tr valign="top">
+    <td><h4>Participation:</h4></td>
+    <td>
+      <select id="participation" name="participation">
+        <option value="term">Term</option>
+      </select>
+      <p>Course participation is limited to term start and end date</p>
+      <label for="start-date">Start</label><br />
+      <input type="date" id="start-date" name="start-date" /><br />
+      <label for="end-date">End</label> <br />
+      <input type="date" id="end-date" name="end-date" /><br /><br />
+      <label
+        ><input type="checkbox" name="restrict_before_start" /> Restrict
+        students from viewing course before term start date</label
+      ><br />
+      <label
+        ><input type="checkbox" name="restrict_after_end" /> Restrict students
+        from viewing course after term end date</label
+      >
+    </td>
+  </tr>
+  <tr valign="top">
+    <td><h4>Default due time:</h4></td>
+    <td>
+      <select name="default_due_time" id="default_due_time">
+        <option value="11:59pm">Account default (11:59pm)</option>
+      </select>
+      <p>
+        This influences the user interface for setting due dates. It does not
+        change the time due for any existing assignments.
+      </p>
+    </td>
+  </tr>
+  <tr valign="top">
+    <td><h4>Language:</h4></td>
+    <td>
+      <select name="language" id="language">
+        <option value="english">
+          Not set (user-configurable, defaults to English)
+        </option>
+      </select>
+      <p>
+        This will override any user/system language preferences. This is only
+        recommended for foreign language courses.
+      </p>
+    </td>
+  </tr>
+  <tr valign="top">
+    <td><h4>File Storage:</h4></td>
+    <td><p>10000 megabytes</p></td>
+  </tr>
+  <tr valign="top">
+    <td><h4>Large Course:</h4></td>
+    <td>
+      <label
+        ><input type="checkbox" name="large_course" />Launch speedgrader
+        Filtered by Student Group</label
+      >
+    </td>
+  </tr>
+  <tr valign="top">
+    <td><h4>Grading Scheme:</h4></td>
+    <td>
+      <label
+        ><input type="checkbox" name="grading_scheme" />Enable course grading
+        scheme</label
+      >
+    </td>
+  </tr>
+  <tr valign="top">
+    <td><h4>License:</h4></td>
+    <td>
+      <select name="license">
+        <option value="private">Private (Copyrighted)</option>
+      </select>
+    </td>
+  </tr>
+  <tr valign="top">
+    <td><h4>File Copyright:</h4></td>
+    <td>
+      <label
+        ><input type="checkbox" name="file_copyright" /> Copyright and license
+        information must be provided for files before they are published.</label
+      >
+    </td>
+  </tr>
+  <tr valign="top">
+    <td><h4>Visibility:</h4></td>
+    <td>
+      <p>
+        If you need to make your course public, please contact your
+        administrator/support.
+      </p>
+      <select name="visibility">
+        <option value="course">Course</option></select
+      ><br />
+      <label
+        ><input type="checkbox" name="include_course" /> Include this course in
+        the public course index</label
+      >
+    </td>
+  </tr>
+  <tr valign="top">
+    <td><h4>Format:</h4></td>
+    <td>
+      <select name="format">
+        <option value="on-campus">On-Campus</option>
+      </select>
+    </td>
+  </tr>
+  <tr valign="top">
+    <td><h4>Mastery Paths:</h4></td>
+    <td>
+      <label
+        ><input type="checkbox" name="mastery_paths" /> Enable individual
+        learning paths for students based on assessment</label
+      >
+    </td>
+  </tr>
+  <tr valign="top">
+    <td><h4>Description:</h4></td>
+    <td><textarea name="description" rows="5" cols="50"></textarea></td>
+  </tr>
+  <tr valign="top">
+    <td></td>
+    <td>
+      <p><a href="#">more options</a></p>
+    </td>
+  </tr>
+  <tr valign="top">
+    <td></td>
+    <td>
+      <button><a href="./screen.html">Update Course Details</a></button>
+    </td>
+  </tr>
+</table>
