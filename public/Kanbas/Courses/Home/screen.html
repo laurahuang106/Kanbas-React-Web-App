@@ -1,12 +1,18 @@
-<table>
-  <tbody>
-    <tr>
-      <td valign="top" id="kanbasNavigation"></td>
-      <td valign="top" id="coursesNavigation"></td>
-      <td valign="top" id="coursesHome"></td>
-    </tr>
-  </tbody>
-</table>
+<html>
+  <head></head>
+  <body>
+    <table width="100%">
+      <tbody>
+        <tr>
+          <td valign="top" id="kanbasNavigation"></td>
+          <td valign="top" id="coursesNavigation"></td>
+          <td valign="top" id="coursesModules"></td>
+          <td valign="top" id="coursesHomeStatus"></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
 
 <script>
   function includeHTML(filePath, elementId) {
@@ -20,5 +26,6 @@
 
   includeHTML("../../Navigation/index.html", "kanbasNavigation");
   includeHTML("../Navigation/index.html", "coursesNavigation");
-  includeHTML("./index.html", "coursesHome");
+  includeHTML("../Modules/index.html", "coursesModules");
+  includeHTML("./Status/index.html", "coursesHomeStatus");
 </script>
