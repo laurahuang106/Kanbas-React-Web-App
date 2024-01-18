@@ -1,24 +1,29 @@
-<table>
-  <tbody>
-    <tr>
-      <td valign="top" id="kanbasNavigation"></td>
-      <td valign="top" id="coursesNavigation"></td>
-      <td valign="top" id="assignmentEdit"></td>
-    </tr>
-  </tbody>
-</table>
+<html>
+  <head> </head>
+  <body>
+    <table width="100%">
+      <tbody>
+        <tr>
+          <td valign="top" id="kanbasNavigation"></td>
+          <td valign="top" id="coursesNavigation"></td>
+          <td valign="top" id="assignmentEdit"></td>
+        </tr>
+      </tbody>
+    </table>
 
-<script>
-  function includeHTML(filePath, elementId) {
-    fetch(filePath)
-      .then((response) => response.text())
-      .then((text) => (document.getElementById(elementId).innerHTML = text))
-      .catch((error) =>
-        console.error("Error loading " + elementId + ":", error)
-      );
-  }
+    <script>
+      function includeHTML(filePath, elementId) {
+        fetch(filePath)
+          .then((response) => response.text())
+          .then((text) => (document.getElementById(elementId).innerHTML = text))
+          .catch((error) =>
+            console.error("Error loading " + elementId + ":", error)
+          );
+      }
 
-  includeHTML("../../../Navigation/index.html", "kanbasNavigation");
-  includeHTML("../../Navigation/index.html", "coursesNavigation");
-  includeHTML("./index.html", "assignmentEdit");
-</script>
+      includeHTML("../../../Navigation/index.html", "kanbasNavigation");
+      includeHTML("../../Navigation/index.html", "coursesNavigation");
+      includeHTML("./index.html", "assignmentEdit");
+    </script>
+  </body>
+</html>
