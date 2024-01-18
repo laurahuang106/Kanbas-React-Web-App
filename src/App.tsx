@@ -28,7 +28,7 @@
 function App() {
   return (
     <>
-      <h1>Welcome to Web Dev CS5610 - 07 Spring 2024</h1>
+      <h1>Welcome to Web Dev CS5610 - 02 Spring 2024</h1>
       <ul>
         <li>
           <a href="labs/a1/index.html">Assignment 1</a>
