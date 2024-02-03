@@ -43,22 +43,26 @@
     <link rel="stylesheet" href="/Kanbas/Courses/Modules/index.css" />
   </head>
   <body>
-    <div
-      class="d-md-none d-flex align-items-center justify-content-between modules-top-bar"
-    >
-      <a href="/kanbas/Navigation/miniScreen.html"
-        ><i class="fas fa-bars"></i
-      ></a>
-      <span>
-        <p>CS5610 - 02 Spring 2024 <br />Modules</p>
-      </span>
-      <span>
-        <a href=""><i class="fa fa-glasses"></i></a>
-        <a href=""><i class="fas fa-angle-down"></i></a>
-      </span>
+    <!-- top bar when screen is small -->
+    <div class="modules-top-bar d-md-none">
+      <div class="row">
+        <div class="col col-left-aligned">
+          <a href="/kanbas/Navigation/miniScreen.html"
+            ><i class="fas fa-bars"></i
+          ></a>
+        </div>
+        <div class="col col-center-aligned">
+          <p>CS5610 - 02 Spring 2024 <br />Modules</p>
+        </div>
+        <div class="col col-right-aligned">
+          <a href=""><i class="fa fa-glasses"></i></a>
+          <a href=""><i class="fas fa-angle-down"></i></a>
+        </div>
+      </div>
     </div>
 
-    <div class="top-bar">
+    <!-- top bar when screen is large -->
+    <!-- <div class="top-bar d-none d-md-block">
       <div class="menu-icon">
         <a href="#"><i class="fas fa-bars"></i></a>
       </div>
@@ -69,7 +73,7 @@
         <a href="#"><i class="fa fa-glasses"></i></a>
         <a href="#"><i class="fas fa-angle-down"></i></a>
       </div>
-    </div>
+    </div> -->
 
     <div class="d-flex">
       <div class="d-none d-md-block">

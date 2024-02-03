@@ -63,11 +63,16 @@
   margin-right: 10px;
 }
 
-.first-col {
+.col-left-aligned {
   text-align: left; 
 }
 
-.second-col {
+.col-center-aligned {
+  text-align: center; 
+  flex: 0 0 70%;
+}
+
+.col-right-aligned {
   text-align: right; 
 }
 

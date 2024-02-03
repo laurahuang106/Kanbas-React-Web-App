@@ -45,11 +45,20 @@
     color: white;
     padding: 10px;
     margin-bottom: 20px;
+    vertical-align: middle;
+}
+
+.modules-top-bar div{
+    vertical-align: middle;
 }
 
 .modules-top-bar a{
     color: white;
 }
+
+.row {
+    align-items: center; 
+  }
 
 .modules-top-bar span{
     color: white; 
