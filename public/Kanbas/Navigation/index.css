@@ -1,0 +1,83 @@
+.wd-kanbas-navigation {
+    background-color: black;
+    list-style: none;
+    padding: 0px;  margin: 0px;
+    width: 80px;
+  }
+  .wd-kanbas-navigation li {
+    padding: 10px;     margin-bottom: 10px;
+    font-size: 0.8em;  text-align: center;
+  }
+  .wd-kanbas-navigation li.wd-account i {
+    color: white;
+  }
+  .wd-kanbas-navigation li.wd-active {
+    background-color: white;
+  }
+  .wd-kanbas-navigation li.wd-active a {
+    color: red;
+  }
+  .wd-kanbas-navigation a {
+    color: white;
+    text-decoration: none;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5px;
+  }
+  .wd-kanbas-navigation a i {
+    color: red;
+    font-size: 2em;
+    margin-bottom: 5px;
+  }
+
+.wd-kanbas-navigation a {
+    margin-bottom: 5px; 
+}
+
+.close-button{    
+  margin: 10px 10px;
+  color: black;
+}
+
+.close-button i {
+  font-size: 24px; 
+}
+  
+/* Custom styles for the main container */
+.custom-container {
+  width: 90%; /* 90% of the screen's width */
+  margin: 0 auto; /* Center the container */
+}
+
+.custom-container a,
+.custom-container a i {
+  text-decoration: none;
+  color: red;
+  margin-bottom: 40px;
+  font-size: 20px;
+}
+
+.custom-container i {
+  margin-right: 10px;
+}
+
+.first-col {
+  text-align: left; 
+}
+
+.second-col {
+  text-align: right; 
+}
+
+.mini-screen-close-button {
+  width: 90%;
+  margin: 0 auto; 
+  padding: 10px 0; 
+}
+
+.mini-screen-close-button i {
+  font-size: 1.5em; 
+  color: black;
+}

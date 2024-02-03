@@ -1,4 +1,4 @@
-<html>
+<!-- <html>
   <head> </head>
   <body>
     <table width="100%">
@@ -25,5 +25,175 @@
       includeHTML("../../Navigation/index.html", "coursesNavigation");
       includeHTML("./index.html", "assignmentEdit");
     </script>
+  </body>
+</html> -->
+
+<html>
+  <head>
+    <link rel="stylesheet" href="/Kanbas/styles.css" />
+    <link rel="stylesheet" href="/Kanbas/Navigation/index.css" />
+    <link rel="stylesheet" href="/Kanbas/Courses/Navigation/index.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/all.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="pageColumn">
+      <div>
+        <ul class="wd-kanbas-navigation">
+          <li>
+            <a href="http://northeastern.edu">
+              <a href="http://northeastern.edu"
+                ><img
+                  class="neuLogo"
+                  src="../../../../images/neuLogo.jpeg"
+                  alt="NEU Logo" /></a
+            ></a>
+          </li>
+          <li>
+            <a href="/Kanbas/Account/Profile/screen.html"
+              ><i class="fa-solid fa-user"></i>Account</a
+            >
+          </li>
+          <li>
+            <a href="/Kanbas/Dashboard/screen.html">
+              <i class="fa fa-tachometer"></i> Dashboard</a
+            >
+          </li>
+          <li class="wd-active">
+            <a href="/Kanbas/Courses/Home/screen.html"
+              ><i class="fas fa-book"></i>Courses</a
+            >
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-calendar"></i> Calendar</a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-envelope"></i>Inbox</a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-history"></i>History</a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-paint-brush"></i>Studio</a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-users"></i>Commons</a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-question-circle"></i>Help</a>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <ul class="wd-navigation">
+          <li>
+            <a href="/Kanbas/Courses/Home/screen.html">Home</a>
+          </li>
+          <li>
+            <a href="/Kanbas/Courses/Modules/screen.html">Modules</a>
+          </li>
+          <li><a href="http://piazza.com">Piazza</a></li>
+          <li><a href="#">Zoom</a></li>
+          <li class="wd-active">
+            <a href="/Kanbas/Courses/Assignments/screen.html">Assignments</a>
+          </li>
+          <li><a href="#">Quizzes</a></li>
+          <li><a href="/Kanbas/Courses/Grades/screen.html">Grades</a></li>
+          <li><a href="#">People</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <form action="../screen.html">
+          <select name="" id="">
+            <option value="">SpeedGrader</option>
+          </select>
+
+          <h2>Assignment Name</h2>
+          <input type="text" value="A1- ENV + HTML" />
+          <br />
+          <br />
+          <textarea name="" id="" cols="30" rows="3">
+    This is the assignment description</textarea
+          >
+          <br />
+          <br />
+
+          <label for="points">Points</label>
+          <br />
+          <input type="text" value="10" id="points" />
+          <br />
+          <br />
+
+          <label for="assignmentGroup">Assignment Group</label>
+          <select name="assignmentGroup" id="assignmentGroup">
+            <option value="">ASSIGNMENTS</option>
+          </select>
+          <br />
+          <br />
+
+          <label for="displayGrade">Display Grade as</label>
+          <select name="displayGrade" id="displayGrade">
+            <option value="">Percentage</option>
+          </select>
+          <br />
+          <br />
+
+          <label for="submissionType">Submission Type</label>
+          <select name="submissionType" id="submissionType">
+            <option value="">Online</option>
+          </select>
+          <br />
+          <br />
+
+          <p>Online Entry Options</p>
+          <input type="checkbox" id="textEntry" /><label for="textEntry"
+            >Text Entry</label
+          ><br />
+          <input type="checkbox" id="websiteURL" /><label for="websiteURL"
+            >Website URL</label
+          ><br />
+          <input type="checkbox" id="mediaRecordings" /><label
+            for="mediaRecordings"
+            >Media Recordings</label
+          ><br />
+          <input type="checkbox" id="studentAnnotaion" /><label
+            for="studentAnnotaion"
+            >Student Annotation</label
+          ><br />
+          <input type="checkbox" id="fileUploads" /><label for="fileUploads"
+            >File Uploads</label
+          ><br />
+          <br />
+
+          <lable>Assign</lable><br />
+          <label for="">Assign to</label><br />
+          <input type="text" value="Everyone" />
+          <br />
+          <br />
+
+          <label for="">Due</label><br />
+          <input type="date" value="2021-01-01" />
+          <br />
+          <br />
+
+          <label for="">Available from</label><br />
+          <input type="date" value="2021-01-01" />
+          <br />
+          <br />
+
+          <label for="">Until</label><br />
+          <input type="date" value="2021-01-01" />
+          <br />
+          <br />
+
+          <button>Cancel</button>
+          <button>Save</button>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
