@@ -23,4 +23,7 @@
     color: red;
     text-decoration: none;
   }
-  
+
+  .wd-navigation-addon{
+    width: auto;
+  }
