@@ -9,3 +9,16 @@ body * {
 .neuLogo{
   width: 60px;
 }
+
+.breadcrumb{
+  color: red;
+  margin-top: 15px;
+}
+
+.breadcrumb span{
+  margin-right: 12px;
+}
+
+.breadcrumb .right-arrow{
+  color: grey;
+}
