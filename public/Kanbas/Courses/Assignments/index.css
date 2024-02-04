@@ -1,0 +1,49 @@
+.assignment-main-section{
+flex-grow: 1
+}
+
+.fa-ellipsis-v{
+    padding: 5px 5px 5px 1px;
+}
+
+.wd-modules,
+.wd-modules * {
+  border-radius: 0%;
+  border: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.wd-modules {
+  margin: 5px;
+}
+
+.wd-modules > li {
+  background-color: lightgray;
+  border: 1px solid gray !important;
+  border-left: none !important;
+}
+
+.wd-modules > li > div {
+  padding: 6px;
+  border-left: 1px solid gray !important;
+}
+
+.wd-modules > li > ul > li {
+  padding: 5px;
+  border-top: 1px solid gray !important;
+  border-left: 2px solid green;
+}
+
+.wd-modules > li {
+  margin-bottom: 20px;
+}
+
+.modules-list-group-icon{
+    margin-right: 25px;
+}
+
+#assignment-button{
+    background-color: red;
+    color: white;
+}

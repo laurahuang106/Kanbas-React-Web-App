@@ -30,16 +30,18 @@
 
 <html>
   <head>
-    <link rel="stylesheet" href="/Kanbas/styles.css" />
-    <link rel="stylesheet" href="/Kanbas/Navigation/index.css" />
-    <link rel="stylesheet" href="/Kanbas/Courses/Navigation/index.css" />
+    <link rel="stylesheet" href="/libs/bootstrap/bootstrap.min.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/all.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="/Kanbas/styles.css" />
+    <link rel="stylesheet" href="/Kanbas/Navigation/index.css" />
+    <link rel="stylesheet" href="/Kanbas/Courses/Navigation/index.css" />
+    <link rel="stylesheet" href="/Kanbas/Courses/Assignments/Edit/index.css" />
   </head>
   <body>
-    <div class="pageColumn">
+    <div class="d-flex me-5">
       <div>
         <ul class="wd-kanbas-navigation">
           <li>
@@ -106,92 +108,132 @@
         </ul>
       </div>
 
-      <div>
+      <div class="flex-grow-1">
         <form action="../screen.html">
-          <select name="" id="">
+          <select name="" id="" class="form-control">
             <option value="">SpeedGrader</option>
           </select>
 
           <h2>Assignment Name</h2>
-          <input type="text" value="A1- ENV + HTML" />
+          <input type="text" value="A1- ENV + HTML" class="form-control" />
           <br />
           <br />
-          <textarea name="" id="" cols="30" rows="3">
-    This is the assignment description</textarea
+          <textarea name="" id="" cols="30" rows="3" class="form-control">
+This is the assignment description</textarea
           >
           <br />
           <br />
 
-          <label for="points">Points</label>
-          <br />
-          <input type="text" value="10" id="points" />
-          <br />
-          <br />
+          <div class="container">
+            <div class="row mb-3">
+              <div class="col-md-4 text-end">
+                <label for="points" class="form-label">Points</label>
+              </div>
+              <div class="col-md-5">
+                <input
+                  type="text"
+                  value="10"
+                  id="points"
+                  class="form-control"
+                />
+              </div>
+            </div>
 
-          <label for="assignmentGroup">Assignment Group</label>
-          <select name="assignmentGroup" id="assignmentGroup">
-            <option value="">ASSIGNMENTS</option>
-          </select>
-          <br />
-          <br />
+            <div class="row mb-3">
+              <div class="col-md-4 text-end">
+                <label for="assignmentGroup" class="form-label"
+                  >Assignment Group</label
+                >
+              </div>
+              <div class="col-md-5">
+                <select
+                  name="assignmentGroup"
+                  class="form-control"
+                  id="assignmentGroup"
+                >
+                  <option value="">ASSIGNMENTS</option>
+                </select>
+              </div>
+            </div>
 
-          <label for="displayGrade">Display Grade as</label>
-          <select name="displayGrade" id="displayGrade">
-            <option value="">Percentage</option>
-          </select>
-          <br />
-          <br />
+            <div class="row mb-3">
+              <div class="col-md-4 text-end">
+                <label for="displayGrade" class="form-label"
+                  >Display Grade as</label
+                >
+              </div>
+              <div class="col-md-5">
+                <select
+                  name="displayGrade"
+                  class="form-control"
+                  id="displayGrade"
+                >
+                  <option value="">Percentage</option>
+                </select>
+              </div>
+            </div>
 
-          <label for="submissionType">Submission Type</label>
-          <select name="submissionType" id="submissionType">
-            <option value="">Online</option>
-          </select>
-          <br />
-          <br />
+            <div class="row mb-3">
+              <div class="col-md-4 text-end">
+                <label for="displayGrade" class="form-label">Assign</label>
+              </div>
+              <div class="col-md-5 border rounded">
+                <label for="assign-to">Assign to</label><br />
+                <input
+                  type="text"
+                  value="Everyone"
+                  class="form-control mb-3"
+                  id="assign-to"
+                />
 
-          <p>Online Entry Options</p>
-          <input type="checkbox" id="textEntry" /><label for="textEntry"
-            >Text Entry</label
-          ><br />
-          <input type="checkbox" id="websiteURL" /><label for="websiteURL"
-            >Website URL</label
-          ><br />
-          <input type="checkbox" id="mediaRecordings" /><label
-            for="mediaRecordings"
-            >Media Recordings</label
-          ><br />
-          <input type="checkbox" id="studentAnnotaion" /><label
-            for="studentAnnotaion"
-            >Student Annotation</label
-          ><br />
-          <input type="checkbox" id="fileUploads" /><label for="fileUploads"
-            >File Uploads</label
-          ><br />
-          <br />
+                <label for="due">Due</label>
+                <input
+                  type="date"
+                  value="2021-01-01"
+                  class="form-control mb-3"
+                  id="due"
+                />
 
-          <lable>Assign</lable><br />
-          <label for="">Assign to</label><br />
-          <input type="text" value="Everyone" />
-          <br />
-          <br />
+                <div class="d-flex">
+                  <div class="flex-grow-1 me-2">
+                    <label for="available-from">Available from</label><br />
+                    <input
+                      type="date"
+                      value="2021-01-01"
+                      class="form-control mb-4"
+                      id="available-from"
+                    />
+                  </div>
+                  <div class="flex-grow-1">
+                    <label for="">Until</label><br />
+                    <input
+                      type="date"
+                      value="2021-01-01"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
 
-          <label for="">Due</label><br />
-          <input type="date" value="2021-01-01" />
-          <br />
-          <br />
+                <a
+                  href="#"
+                  class="d-block text-center text-decoration-none text-dark add-button"
+                  >+ Add</a
+                >
+              </div>
+            </div>
+          </div>
+          <hr />
 
-          <label for="">Available from</label><br />
-          <input type="date" value="2021-01-01" />
-          <br />
-          <br />
-
-          <label for="">Until</label><br />
-          <input type="date" value="2021-01-01" />
-          <br />
-          <br />
-
-          <button>Cancel</button>
-          <button>Save</button>
+          <div class="d-flex">
+            <label for="notify-user"
+              ><input type="checkbox" id="notify-user" /> Notify users that this
+              content has changed</label
+            >
+            <div class="ms-auto">
+              <button class="btn btn-secondary">Cancel</button>
+              <button class="btn btn-danger">Save</button>
+            </div>
+          </div>
         </form>
       </div>
     </div>
