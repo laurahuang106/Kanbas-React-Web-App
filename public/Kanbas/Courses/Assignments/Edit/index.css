@@ -1,6 +1,46 @@
+.breadcrumb{
+    color: red;
+    margin-top: 15px;
+}
+
+.breadcrumb span{
+    margin-right: 10px;
+}
+
+.right-arrow{
+    color: grey;
+}
+
+.publish-bar{
+    color:green;
+}
+
+.publish-bar p {
+    margin-top: 15px;
+}
+
+.publish-edit{
+    color: black;
+    border-color: lightgray;
+    border-radius: 10%;
+    background-color: lightgrey;
+    padding: 10px 13px;
+}
+
+
+
+#assignment-name{
+    color: black;
+}
+
+
+
 .add-button {
     width: 100%;
     padding: 5px 0;
     background-color: lightgrey; 
   }
-  
+
+.remove-margin{
+    margin-left: -12px;
+}
