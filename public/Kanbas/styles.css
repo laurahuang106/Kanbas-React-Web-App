@@ -6,6 +6,11 @@ body * {
     font-family: Arial, Helvetica, sans-serif;
   }
 
+.remove-nav-left-margin{
+  margin-left: -12px;
+}
+  
+
 .neuLogo{
   width: 60px;
 }
