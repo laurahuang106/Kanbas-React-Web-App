@@ -53,5 +53,10 @@
     align-items: flex-start; /* Ensures all items in the row are aligned to the top */
   }
 
+  .published-button{
+    background-color: green;
+    color: white;
+  }
+
 
   

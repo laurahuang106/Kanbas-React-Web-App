@@ -27,3 +27,7 @@
   .wd-navigation-addon{
     width: auto;
   }
+
+  .course-navbar-margin-left{
+    margin-left: -23px;
+  }
