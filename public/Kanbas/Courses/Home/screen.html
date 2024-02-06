@@ -115,17 +115,24 @@
           </div>
 
           <div class="col-11">
-            <div class="breadcrumb">
-              <h4>
-                <i class="fa-solid fa-bars ms-4 me-4"></i> <span>CS5610-02</span
-                ><span class="right-arrow">></span
-                ><span class="text-dark">Modules</span>
-              </h4>
-            </div>
-            <hr />
+            <nav
+              style="--bs-breadcrumb-divider: '>'"
+              aria-label="breadcrumb"
+              class="d-none d-md-block ms-4"
+            >
+              <ol class="breadcrumb fs-4">
+                <li class="breadcrumb-item">
+                  <i class="fa-solid fa-bars me-4"></i>CS5610-02
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">
+                  Assignments
+                </li>
+              </ol>
+              <hr />
+            </nav>
 
             <div class="d-flex">
-              <div class="flex-grow-1" style="max-width: 15%">
+              <div class="flex-grow-1 d-none d-md-block" style="max-width: 15%">
                 <ul class="wd-navigation">
                   <li class="wd-active">
                     <a href="/Kanbas/Courses/Home/screen.html">Home</a>
@@ -148,14 +155,19 @@
                 </ul>
               </div>
 
-              <div class="flex-grow-1 me-3">
-                <div class="d-flex justify-content-end courses-top-bar">
-                  <button>Collapse All</button>
-                  <button>View Progress</button>
-                  <select name="" id="">
+              <div class="flex-grow-1">
+                <div
+                  class="d-flex justify-content-end courses-top-bar g-4 gx-3"
+                >
+                  <button class="me-1">Collapse All</button>
+                  <button class="me-1">View Progress</button>
+                  <select name="" id="" class="me-1">
                     <option value="">Publish All</option>
                   </select>
-                  <button class="red-button">+ Module</button>
+                  <button class="red-button me-1">+ Module</button>
+                  <i
+                    class="fa fa-ellipsis-v p-2 border border-secondary bg-light"
+                  ></i>
                 </div>
                 <hr />
                 <ul class="list-group wd-modules">
@@ -237,7 +249,7 @@
               </div>
 
               <div
-                class="flex-grow-0 ms-2 me-2 d-none d-lg-block"
+                class="flex-grow-0 ms-4 me-2 d-none d-lg-block"
                 style="width: 250px"
               >
                 <h4>Course Status</h4>
