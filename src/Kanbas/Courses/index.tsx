@@ -1,4 +1,3 @@
-import { Module } from "module";
 import React from "react";
 import { useParams, Routes, Route, Navigate } from "react-router-dom";
 import { HiMiniBars3 } from "react-icons/hi2";
@@ -15,14 +14,17 @@ function Courses() {
   const course = courses.find((course) => course._id === courseId);
   return (
     <>
-      <h1>
+      <h1 className="ms-3 text-danger">
         <HiMiniBars3 /> Course {course?.name}
       </h1>
+      <hr />
+
       <CourseNavigation />
+
       <div>
         <div
           className="overflow-y-scroll position-fixed bottom-0 end-0"
-          style={{ left: "320px", top: "50px" }}
+          style={{ left: "320px", top: "80px" }}
         >
           <Routes>
             <Route path="/" element={<Navigate to="Home" />} />

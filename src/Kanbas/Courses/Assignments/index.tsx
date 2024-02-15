@@ -11,7 +11,27 @@ function Assignments() {
 
   return (
     <>
-      {/* {<!-- Add buttons and other fields here -->} */}
+      <div className="d-flex align-items-center justify-content-between">
+        <input
+          type="text"
+          className="form-control me-1"
+          placeholder="Search for Assignments"
+          style={{ width: "40%" }}
+        />
+        <div className="float-end">
+          <button className="btn btn-light border me-1 py-1">
+            <i className="fa-solid fa-plus"></i> Group
+          </button>
+          <button className="btn btn-danger border py-1 me-1">
+            <i className="fa-solid fa-plus"></i> Assignment
+          </button>
+          <button className="btn btn-light border px-2 py-1 me-1">
+            <FaEllipsisV />
+          </button>
+        </div>
+      </div>
+      <hr />
+
       <ul className="list-group wd-modules">
         <li className="list-group-item">
           <div>

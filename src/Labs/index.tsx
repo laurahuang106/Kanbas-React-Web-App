@@ -12,13 +12,13 @@ function Labs() {
         <nav className="nav nav-tabs mt-2">
           <Link to="/Labs/a3" className="nav-link">
             Assignment 3
-          </Link>
+          </Link>{" "}
           <Link to="/Labs/a4" className="nav-link">
             Assignment 4
           </Link>
         </nav>
         <Routes>
-          <Route path="/a3" element={<Assignment3 />} />
+          <Route path="/a3/*" element={<Assignment3 />} />
           <Route path="/a4" element={<Assignment4 />} />
         </Routes>
       </div>

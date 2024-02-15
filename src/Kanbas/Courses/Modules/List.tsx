@@ -5,12 +5,24 @@ import { FaEllipsisV, FaCheckCircle, FaPlusCircle } from "react-icons/fa";
 import { useParams } from "react-router";
 
 function ModuleList() {
-  const { cid } = useParams();
-  const modulesList = modules.filter((module) => module.course === cid);
+  const { courseId } = useParams();
+  const modulesList = modules.filter((module) => module.course === courseId);
   const [selectedModule, setSelectedModule] = useState(modulesList[0]);
   return (
     <>
-      {/* <!-- Add buttons here --> */}
+      <div className="d-flex justify-content-end gap-1">
+        <button>Collapse All</button>
+        <button>View Progress</button>
+        <select name="" id="">
+          <option value="">Publish All</option>
+        </select>
+        <button className="red-button">+ Module</button>
+        <div className="border">
+          <FaEllipsisV />
+        </div>
+      </div>
+      <hr />
+
       <ul className="list-group wd-modules">
         {modulesList.map((module) => (
           <li

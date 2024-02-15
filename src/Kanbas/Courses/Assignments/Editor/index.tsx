@@ -1,4 +1,5 @@
 import React from "react";
+import { FaCheckCircle, FaEllipsisV } from "react-icons/fa";
 import { useNavigate, useParams, Link } from "react-router-dom";
 import { assignments } from "../../../Database";
 
@@ -15,6 +16,16 @@ function AssignmentEditor() {
   };
   return (
     <div>
+      <div className="d-flex justify-content-end align-items-center gap-2">
+        <div className="text-success">
+          <FaCheckCircle /> Published
+        </div>
+        <button className="btn border">
+          <FaEllipsisV />
+        </button>
+      </div>
+      <hr />
+
       <h2>Assignment Name</h2>
       <input value={assignment?.title} className="form-control mb-2" />
       <button onClick={handleSave} className="btn btn-success ms-2 float-end">
