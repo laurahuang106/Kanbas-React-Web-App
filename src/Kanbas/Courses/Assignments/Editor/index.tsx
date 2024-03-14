@@ -1,11 +1,11 @@
 import React from "react";
 import { FaCheckCircle, FaEllipsisV } from "react-icons/fa";
 import { useNavigate, useParams, Link } from "react-router-dom";
-import { assignments } from "../../../Database";
+import db from "../../../Database";
 
 function AssignmentEditor() {
   const { assignmentId } = useParams();
-  const assignment = assignments.find(
+  const assignment = db.assignments.find(
     (assignment) => assignment._id === assignmentId
   );
   const { courseId } = useParams();
