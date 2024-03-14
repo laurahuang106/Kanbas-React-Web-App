@@ -8,6 +8,10 @@ import ObjectStateVariable from "./ObjectStateVariable";
 import ParentStateComponent from "./ParentStateComponent";
 import PassingDataOnEvent from "./PassingDataOnEvent";
 import PassingFunctions from "./PassingFunctions";
+import AddRedux from "./ReduxExamples/AddRedux";
+import CounterRedux from "./ReduxExamples/CounterRedux";
+import HelloRedux from "./ReduxExamples/HelloRedux";
+import TodoList from "./ReduxExamples/todos/TodoList";
 import StringStateVariables from "./StringStateVariables";
 
 function Assignment4() {
@@ -17,6 +21,10 @@ function Assignment4() {
   return (
     <div>
       <h2>Assignment 4</h2>
+      <TodoList />
+      <HelloRedux />
+      <CounterRedux />
+      <AddRedux />
       <ClickEvent />
       <PassingDataOnEvent />
       <PassingFunctions theFunction={sayHello} />
