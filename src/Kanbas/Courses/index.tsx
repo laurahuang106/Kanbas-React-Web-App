@@ -36,6 +36,7 @@ function Courses({ courses }: { courses: any[] }) {
               path="Assignments/:assignmentId"
               element={<AssignmentEditor />}
             />
+            <Route path="Assignments/New" element={<AssignmentEditor />} />
             <Route path="Grades" element={<Grades />} />
           </Routes>
         </div>
