@@ -56,12 +56,12 @@ function Dashboard({
       <div className="row">
         <div className="row row-cols-1 row-cols-md-5 g-4">
           {courses.map((course) => (
-            <div className="col" style={{ width: "300px" }}>
+            <div className="col" style={{ width: "340px" }}>
               <div className="card">
                 <img
                   src={`/images/${course.image}`}
                   className="card-img-top"
-                  style={{ maxHeight: "150px" }}
+                  style={{ height: "170px" }}
                 />
                 <div className="card-body">
                   <Link

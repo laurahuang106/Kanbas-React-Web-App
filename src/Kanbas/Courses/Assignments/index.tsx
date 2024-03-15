@@ -9,8 +9,6 @@ import { Link, useParams, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import {
   setDefaultAssignment,
-  updateAssignment,
-  addAssignment,
   deleteAssignment,
   setAssignment,
 } from "./assignmentsReducer";
