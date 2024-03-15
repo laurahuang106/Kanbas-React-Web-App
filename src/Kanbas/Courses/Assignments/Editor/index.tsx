@@ -16,8 +16,6 @@ function AssignmentEditor() {
   const assignment = useSelector(
     (state: KanbasState) => state.assignmentsReducer.assignment
   );
-  console.log(courseId);
-  console.log(assignmentId);
   const navigate = useNavigate();
   const handleSave = () => {
     if (assignmentId) {
@@ -30,7 +28,7 @@ function AssignmentEditor() {
   };
 
   return (
-    <div>
+    <div className="me-2">
       <div className="d-flex justify-content-end align-items-center gap-2">
         <div className="text-success">
           <FaCheckCircle /> Published
@@ -77,7 +75,7 @@ function AssignmentEditor() {
             <div className="col-md-5">
               <input
                 type="text"
-                value={assignment.points ? assignment.points : 80}
+                value={assignment.points}
                 id="points"
                 className="form-control"
                 onChange={(e) =>

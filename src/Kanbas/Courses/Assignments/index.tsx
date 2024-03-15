@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import {
   FaCheckCircle,
   FaEllipsisV,
@@ -8,8 +8,7 @@ import {
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import {
-  // setFilteredAssignments,
-  // setDefaultAssignment,
+  setDefaultAssignment,
   updateAssignment,
   addAssignment,
   deleteAssignment,
@@ -21,10 +20,6 @@ function Assignments() {
   const { courseId } = useParams();
   const dispatch = useDispatch();
   const navigate = useNavigate();
-
-  // useEffect(() => {
-  //   dispatch(setFilteredAssignments(courseId));
-  // }, [dispatch, courseId]);
 
   const assignmentList = useSelector(
     (state: KanbasState) => state.assignmentsReducer.assignments
@@ -77,33 +72,35 @@ function Assignments() {
             </span>
           </div>
           <ul className="list-group">
-            {assignmentList.map((assignment) => (
-              <li className="list-group-item">
-                <FaEllipsisV className="me-2" />
-                <button
-                  className="btn btn-link"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    dispatch(setAssignment(assignment));
-                    navigate(
-                      `/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`
-                    );
-                  }}
-                >
-                  {assignment.title}
-                </button>
-                <span className="float-end">
+            {assignmentList
+              .filter((assignment) => assignment.course === courseId)
+              .map((assignment) => (
+                <li className="list-group-item">
+                  <FaEllipsisV className="me-2" />
                   <button
-                    className="btn btn-primary me-2"
-                    onClick={() => handleDelete(assignment._id)}
+                    className="btn btn-link"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      dispatch(setAssignment(assignment));
+                      navigate(
+                        `/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`
+                      );
+                    }}
                   >
-                    Delete
+                    {assignment.title}
                   </button>
-                  <FaCheckCircle className="text-success" />
-                  <FaEllipsisV className="ms-2" />
-                </span>
-              </li>
-            ))}
+                  <span className="float-end">
+                    <button
+                      className="btn btn-primary me-2"
+                      onClick={() => handleDelete(assignment._id)}
+                    >
+                      Delete
+                    </button>
+                    <FaCheckCircle className="text-success" />
+                    <FaEllipsisV className="ms-2" />
+                  </span>
+                </li>
+              ))}
           </ul>
         </li>
       </ul>
