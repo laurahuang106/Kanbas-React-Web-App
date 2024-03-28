@@ -11,6 +11,8 @@ interface Todo {
 
 function WorkingWithArrays() {
   const API = "http://localhost:4000/a5/todos";
+  const [errorMessage, setErrorMessage] = useState(null);
+
   const [todo, setTodo] = useState<Todo>({
     id: 1,
     title: "NodeJS Assignment",
@@ -19,6 +21,30 @@ function WorkingWithArrays() {
     completed: false,
   });
   const [todos, setTodos] = useState<Todo[]>([]);
+  const postTodo = async () => {
+    const response = await axios.post(API, todo);
+    setTodos([...todos, response.data]);
+  };
+  const deleteTodo = async (todo: Todo) => {
+    try {
+      const response = await axios.delete(`${API}/${todo.id}`);
+      setTodos(todos.filter((t) => t.id !== todo.id));
+    } catch (error: any) {
+      console.log(error);
+      setErrorMessage(error.response.data.message);
+    }
+  };
+
+  const updateTodo = async () => {
+    try {
+      const response = await axios.put(`${API}/${todo.id}`, todo);
+      setTodos(todos.map((t) => (t.id === todo.id ? todo : t)));
+    } catch (error: any) {
+      console.log(error);
+      setErrorMessage(error.response.data.message);
+    }
+  };
+
   const fetchTodos = async () => {
     const response = await axios.get(API);
     setTodos(response.data);
@@ -54,10 +80,69 @@ function WorkingWithArrays() {
         Create Todo
       </button>
 
+      <br />
+      <input value={todo.id} readOnly />
+      <br />
+      <input
+        onChange={(e) => setTodo({ ...todo, title: e.target.value })}
+        value={todo.title}
+        type="text"
+      />
+      <br />
+      <textarea
+        value={todo.description}
+        onChange={(e) => setTodo({ ...todo, description: e.target.value })}
+      />
+      <br />
+      <input
+        value={todo.due}
+        type="date"
+        onChange={(e) =>
+          setTodo({
+            ...todo,
+            due: e.target.value,
+          })
+        }
+      />
+      <br />
+      <label>
+        <input
+          checked={todo.completed}
+          type="checkbox"
+          onChange={(e) =>
+            setTodo({
+              ...todo,
+              completed: e.target.checked,
+            })
+          }
+        />
+        Completed
+      </label>
+      <button className="btn btn-primary" onClick={postTodo}>
+        Post Todo
+      </button>
+      <button className="btn btn-success" onClick={updateTodo}>
+        Update Todo
+      </button>
+
+      {errorMessage && (
+        <div className="alert alert-danger mb-2 mt-2">{errorMessage}</div>
+      )}
+
       <ul>
         {todos.map((todo) => (
           <li key={todo.id}>
             {todo.title}
+            <input checked={todo.completed} type="checkbox" readOnly />
+            <p>{todo.description}</p>
+            <p>{todo.due}</p>
+            <button
+              onClick={() => deleteTodo(todo)}
+              className="btn btn-danger float-end ms-2"
+            >
+              Delete
+            </button>
+
             <button className="btn btn-danger" onClick={() => removeTodo(todo)}>
               Remove
             </button>
