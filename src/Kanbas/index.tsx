@@ -39,12 +39,7 @@ function Kanbas() {
     };
 
     const response = await axios.post(COURSES_API, newCourse);
-    setCourses([
-      ...courses,
-      setCourses([...courses, response.data]),
-
-      // { ...course, _id: new Date().getTime().toString() },
-    ]);
+    setCourses([...courses, response.data]);
   };
 
   const deleteCourse = async (courseId: string) => {
