@@ -12,7 +12,7 @@ import Grades from "./Grades";
 
 function Courses({ courses }: { courses: any[] }) {
   const { courseId } = useParams();
-  const COURSES_API = "https://kanbas-node-server-app.onrender.com/api/courses";
+  const COURSES_API = "http://localhost:4000/api/courses";
 
   const [course, setCourse] = useState<any>({ _id: "" });
   const findCourseById = async (courseId?: string) => {
