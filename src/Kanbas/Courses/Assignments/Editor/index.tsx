@@ -6,8 +6,10 @@ import {
   addAssignment,
   updateAssignment,
   setAssignment,
+  setAssignments,
 } from "../assignmentsReducer";
 import { KanbasState } from "../../../store";
+import * as client from "../client";
 
 function AssignmentEditor() {
   const dispatch = useDispatch();
@@ -17,12 +19,18 @@ function AssignmentEditor() {
     (state: KanbasState) => state.assignmentsReducer.assignment
   );
   const navigate = useNavigate();
-  const handleSave = () => {
+
+  const handleSave = async () => {
     if (assignmentId) {
       console.log("final", assignment);
+      const status = await client.updateAssignment(assignment);
       dispatch(updateAssignment(assignment));
     } else {
-      dispatch(addAssignment({ ...assignment, course: courseId }));
+      client
+        .createAssignment(courseId as string, assignment)
+        .then((assignment) => {
+          dispatch(addAssignment(assignment));
+        });
     }
     navigate(`/Kanbas/Courses/${courseId}/Assignments`);
   };

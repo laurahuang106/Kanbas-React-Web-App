@@ -15,6 +15,7 @@ import * as client from "./client";
 
 function ModuleList() {
   const { courseId } = useParams();
+  const dispatch = useDispatch();
 
   const handleUpdateModule = async () => {
     const status = await client.updateModule(module);
@@ -39,8 +40,8 @@ function ModuleList() {
   const module = useSelector(
     (state: KanbasState) => state.modulesReducer.module
   );
-  const dispatch = useDispatch();
-  const [selectedModule, setSelectedModule] = useState(moduleList[0]);
+
+  const [selectedModule, setSelectedModule] = useState(module);
 
   useEffect(() => {
     client
