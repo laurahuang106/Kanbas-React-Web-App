@@ -3,6 +3,7 @@ import { FaCheckCircle, FaEllipsisV, FaPlusCircle } from "react-icons/fa";
 import { useParams, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import {
+  setDefaultAssignment,
   deleteAssignment,
   setAssignment,
   setAssignments,
@@ -29,9 +30,6 @@ function Assignments() {
   const assignmentList = useSelector(
     (state: KanbasState) => state.assignmentsReducer.assignments
   );
-  const assignment = useSelector(
-    (state: KanbasState) => state.assignmentsReducer.assignment
-  );
 
   useEffect(() => {
     client
@@ -53,6 +51,7 @@ function Assignments() {
           <button
             className="btn btn-danger border py-1 me-1"
             onClick={() => {
+              dispatch(setDefaultAssignment());
               navigate(`/Kanbas/Courses/${courseId}/Assignments/New`);
             }}
           >

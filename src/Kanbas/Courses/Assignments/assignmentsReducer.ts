@@ -25,6 +25,10 @@ const assignmentsSlice = createSlice({
   name: "assignments",
   initialState,
   reducers: {    
+    setDefaultAssignment: (state) => {
+      state.assignment = { _id:"A123", title: "New assignment 123", course: "RS101",  description: "This is the assignment description", points: 100,}
+    },
+
     addAssignment: (state, action) => {
       state.assignments = [
         { ...action.payload, _id: new Date().getTime().toString() },
@@ -55,6 +59,6 @@ const assignmentsSlice = createSlice({
   });
   
   
-  export const {addAssignment, deleteAssignment,
+  export const {setDefaultAssignment, addAssignment, deleteAssignment,
     updateAssignment, setAssignment, setAssignments } = assignmentsSlice.actions;
   export default assignmentsSlice.reducer;
