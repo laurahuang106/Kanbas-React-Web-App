@@ -16,6 +16,11 @@ export default function Profile() {
     await client.updateUser(profile);
   };
 
+  const signout = async () => {
+    await client.signout();
+    navigate("/Kanbas/Account/Signin");
+  };
+
   const fetchProfile = async () => {
     const account = await client.profile();
     setProfile(account);
@@ -83,7 +88,12 @@ export default function Profile() {
             <option value="FACULTY">Faculty</option>
             <option value="STUDENT">Student</option>
           </select>
-          <button onClick={save}>Save</button>
+          <button className="btn btn-primary me-2" onClick={save}>
+            Save
+          </button>
+          <button className="btn btn-danger" onClick={signout}>
+            Signout
+          </button>
         </div>
       )}
     </div>

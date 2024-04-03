@@ -5,6 +5,11 @@ export const USERS_API = `${BASE_API}/api/users`;
 export interface User { _id: string; username: string; password: string; role: string;
 firstName: string, lastName: string };
 
+export const signup = async (user: User) => {
+  const response = await axios.post(`${USERS_API}/signup`, user);
+  return response.data;
+};
+
 export const signin = async (credentials: User) => {
   const response = await axios.post( `${USERS_API}/signin`, credentials );
   return response.data;
@@ -46,4 +51,11 @@ export const findUsersByRole = async (role: string) => {
     axios.get(`${USERS_API}?role=${role}`);
   return response.data;
 };
+
+export const signout = async () => {
+  const response = await axios.post(`${USERS_API}/signout`);
+  return response.data;
+};
+
+
 
