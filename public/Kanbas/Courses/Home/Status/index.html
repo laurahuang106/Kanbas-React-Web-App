@@ -1,43 +1,93 @@
 <html>
-  <head> </head>
+  <head>
+    <link rel="stylesheet" href="/libs/bootstrap/bootstrap.min.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/all.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/kanbas/Courses/Home/Status/index.css" />
+  </head>
   <body>
     <h4>Course Status</h4>
     <table>
       <tbody>
         <tr>
           <td>
-            <button>Unpublish</button>
+            <button><i class="fas fa-ban"></i> Unpublish</button>
           </td>
           <td>
-            <button>Published</button>
+            <button><i class="fas fa-check"></i> Published</button>
           </td>
         </tr>
       </tbody>
     </table>
-    <ul>
-      <li><a href="#">Import Existing Content</a></li>
-      <li><a href="#">Import From Commons</a></li>
-      <li><a href="#">Choose Home Page</a></li>
-      <li><a href="#">View Course Stream</a></li>
-      <li><a href="#">New Announcement</a></li>
-      <li><a href="#">New Analytics</a></li>
-      <li>
-        <a href="#">View Course Notifications</a>
+    <ul class="course-status-list">
+      <li class="status-item rounded">
+        <i class="fas fa-file-import"></i> Import Existing Content
+      </li>
+      <li class="status-item rounded">
+        <i class="fas fa-cloud-download-alt"></i> Import from Commons
+      </li>
+      <li class="status-item rounded">
+        <i class="fas fa-home"></i> Choose Home Page
+      </li>
+      <li class="status-item rounded">
+        <i class="fas fa-stream"></i> View Course Stream
+      </li>
+      <li class="status-item rounded">
+        <i class="fas fa-bullhorn"></i> New Announcement
+      </li>
+      <li class="status-item rounded">
+        <i class="fas fa-chart-line"></i> New Analytics
+      </li>
+      <li class="status-item rounded">
+        <i class="fas fa-bell"></i> View Course Notifications
       </li>
     </ul>
 
-    <h4>Coming Up</h4>
-    <a href="#">View Calendar</a>
-    <ul>
-      <li>
-        <a href="#">Lecture CS4550.12631.202410 Sep 7 at 11:45am</a>
-      </li>
-      <li>
-        <a href="#">Lecture CS4550.12631.202410 Sep 11 at 11:45am</a>
-      </li>
-      <li>
-        <a href="#">CS5610 06 SP23 Lecture Sep 11 at 6pm</a>
-      </li>
-    </ul>
+    <div class="d-flex justify-content-between align-items-center">
+      <h4>Coming Up</h4>
+      <div>
+        <i class="fas fa-calendar-day"></i>
+        <a href="#" class="view-calendar-button">View Calendar</a>
+      </div>
+    </div>
+    <hr />
+
+    <div class="coming-up-container">
+      <div class="row top-align">
+        <div class="col left-col">
+          <i class="fas fa-calendar-day"></i>
+        </div>
+        <div class="col right-col">
+          <li>
+            <a href="#">Lecture</a>
+            <p>CS4550.12631.202410 Sep 7 at 11:45am</p>
+          </li>
+        </div>
+      </div>
+      <div class="row top-align">
+        <div class="col left-col">
+          <i class="fas fa-calendar-day"></i>
+        </div>
+        <div class="col right-col">
+          <li>
+            <a href="#">CS5610 06 SP23 Lecture</a>
+            <p>CS4550.12631.202410 Sep 11 at 6pm</p>
+          </li>
+        </div>
+      </div>
+      <div class="row top-align">
+        <div class="col left-col">
+          <i class="fas fa-calendar-day"></i>
+        </div>
+        <div class="col right-col">
+          <li>
+            <a href="#">CS5610 Web Development Summer 1 2023 - Lecture</a>
+            <p>CS4550.12631.202410 Sep 11 at 7pm</p>
+          </li>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

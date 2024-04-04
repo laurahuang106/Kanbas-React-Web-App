@@ -1,4 +1,4 @@
-<html>
+<!-- <html>
   <head> </head>
   <body>
     <table width="100%">
@@ -25,5 +25,332 @@
       includeHTML("../Navigation/index.html", "coursesNavigation");
       includeHTML("./index.html", "grades");
     </script>
+  </body>
+</html> -->
+
+<html>
+  <head>
+    <link rel="stylesheet" href="/libs/bootstrap/bootstrap.min.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/all.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/Kanbas/styles.css" />
+    <link rel="stylesheet" href="/Kanbas/Navigation/index.css" />
+    <link rel="stylesheet" href="/Kanbas/Courses/Navigation/index.css" />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-auto remove-nav-left-margin">
+          <ul class="wd-kanbas-navigation">
+            <li>
+              <a href="http://northeastern.edu">
+                <a href="http://northeastern.edu"
+                  ><img
+                    class="neuLogo"
+                    src="../../../images/neuLogo.jpeg"
+                    alt="NEU Logo" /></a
+              ></a>
+            </li>
+            <li class="wd-account">
+              <a href="/Kanbas/Account/Profile/screen.html"
+                ><i class="fa-solid fa-user"></i>Account</a
+              >
+            </li>
+            <li>
+              <a href="/Kanbas/Dashboard/screen.html">
+                <i class="fa fa-tachometer"></i> Dashboard</a
+              >
+            </li>
+            <li class="wd-active">
+              <a href="/Kanbas/Courses/Home/screen.html"
+                ><i class="fas fa-book"></i>Courses</a
+              >
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-calendar"></i> Calendar</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-envelope"></i>Inbox</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-history"></i>History</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-paint-brush"></i>Studio</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-users"></i>Commons</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-question-circle"></i>Help</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col">
+          <div class="row">
+            <div class="col">
+              <nav
+                style="--bs-breadcrumb-divider: '>'"
+                aria-label="breadcrumb"
+                class="d-none d-md-block"
+              >
+                <ol class="breadcrumb fs-4">
+                  <li class="breadcrumb-item">
+                    <i class="fa-solid fa-bars ms-2 me-4"></i>CS5610-02
+                  </li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                    Grades
+                  </li>
+                </ol>
+              </nav>
+            </div>
+            <hr />
+
+            <div class="row">
+              <div class="col-auto">
+                <div class="me-5 course-navbar-margin-left">
+                  <ul class="wd-navigation">
+                    <li>
+                      <a href="/Kanbas/Courses/Home/screen.html">Home</a>
+                    </li>
+                    <li>
+                      <a href="/Kanbas/Courses/Modules/screen.html">Modules</a>
+                    </li>
+                    <li><a href="http://piazza.com">Piazza</a></li>
+                    <li><a href="#">Zoom</a></li>
+                    <li>
+                      <a href="/Kanbas/Courses/Assignments/screen.html"
+                        >Assignments</a
+                      >
+                    </li>
+                    <li><a href="#">Quizzes</a></li>
+                    <li class="wd-active">
+                      <a href="/Kanbas/Courses/Grades/screen.html">Grades</a>
+                    </li>
+                    <li><a href="#">People</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="col-10">
+                <div class="d-flex justify-content-end align-items-center">
+                  <button type="button" class="btn btn-light border me-2">
+                    <i class="fas fa-file-import"></i> Import
+                  </button>
+
+                  <div class="btn-group me-3">
+                    <button
+                      type="button"
+                      class="btn btn-light border dropdown-toggle"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <i class="fas fa-file-export"></i> Export
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Export</a></li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          >Export Current Gradebook View</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          >Export Entire Gradebook</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+
+                  <button type="button" class="btn btn-light border p-2">
+                    <i class="fas fa-cog"></i>
+                  </button>
+                </div>
+                <hr />
+
+                <div>
+                  <div class="row">
+                    <div class="col">
+                      <h4>Student Names</h4>
+                    </div>
+                    <div class="col"><h4>Assignment Names</h4></div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col">
+                      <div class="dropdown">
+                        <div class="input-group">
+                          <span class="input-group-text"
+                            ><i class="fa-solid fa-magnifying-glass"></i
+                          ></span>
+                          <input
+                            type="text"
+                            class="form-control dropdown-toggle"
+                            id="dropdownSearch"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                            placeholder="Search Students"
+                          />
+                          <button
+                            class="btn btn-outline-secondary dropdown-toggle"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                          ></button>
+                          <ul
+                            class="dropdown-menu"
+                            aria-labelledby="dropdownSearch"
+                          >
+                            <li>
+                              <a class="dropdown-item" href="#">A1 Setup</a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#">A2 HTML</a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#">A3 CSS</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col">
+                      <div class="dropdown">
+                        <div class="input-group">
+                          <span class="input-group-text"
+                            ><i class="fa-solid fa-magnifying-glass"></i
+                          ></span>
+                          <input
+                            type="text"
+                            class="form-control dropdown-toggle"
+                            id="dropdownSearch"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                            placeholder="Search Assignments"
+                          />
+                          <button
+                            class="btn btn-outline-secondary dropdown-toggle"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                          ></button>
+                          <ul
+                            class="dropdown-menu"
+                            aria-labelledby="dropdownSearch"
+                          >
+                            <li>
+                              <a class="dropdown-item" href="#">A1 Setup</a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#">A2 HTML</a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#">A3 CSS</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <button class="btn border btn-light mt-3 my-3">
+                  <i class="fa fa-filter me-2"></i>Apply Filters
+                </button>
+
+                <div class="table-responsive">
+                  <table class="table table-striped table-bordered">
+                    <thead>
+                      <tr>
+                        <th>Student Name</th>
+                        <th>A1 SETUP<br />Out of 100</th>
+                        <th>A2 HTML<br />Out of 100</th>
+                        <th>A3 CSS<br />Out of 100</th>
+                        <th>A4 BOOTSTRAP<br />Out of 100</th>
+                        <th>A5 JAVASCRIPT<br />Out of 100</th>
+                        <th>A6 REACT<br />Out of 100</th>
+                        <th>A7 REDUX<br />Out of 100</th>
+                        <th>A8 NODE<br />Out of 100</th>
+                        <th>A9 MONGO<br />Out of 100</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="text-danger">Alice Wonderland</td>
+                        <td contenteditable="true">98</td>
+                        <td contenteditable="true">89</td>
+                        <td contenteditable="true">87</td>
+                        <td contenteditable="true">90</td>
+                        <td contenteditable="true">89</td>
+                        <td contenteditable="true">94</td>
+                        <td contenteditable="true">88</td>
+                        <td contenteditable="true">87</td>
+                        <td contenteditable="true">100</td>
+                      </tr>
+                      <tr>
+                        <td class="text-danger">Princes Leia</td>
+                        <td>98</td>
+                        <td>80</td>
+                        <td>87</td>
+                        <td>86</td>
+                        <td>100</td>
+                        <td>94</td>
+                        <td><input type="text" value="85" size="5" /></td>
+                        <td>84</td>
+                        <td>92</td>
+                      </tr>
+                      <tr>
+                        <td class="text-danger">Luke Skywalker</td>
+                        <td><input type="text" value="99" size="5" /></td>
+                        <td>88</td>
+                        <td>97</td>
+                        <td>82</td>
+                        <td>96</td>
+                        <td>93</td>
+                        <td>95</td>
+                        <td>100</td>
+                        <td>93</td>
+                      </tr>
+                      <tr>
+                        <td class="text-danger">Han Solo</td>
+                        <td>83</td>
+                        <td>99</td>
+                        <td>94</td>
+                        <td>98</td>
+                        <td>86</td>
+                        <td>85</td>
+                        <td><input type="text" value="86" size="5" /></td>
+                        <td>80</td>
+                        <td>84</td>
+                      </tr>
+                      <tr>
+                        <td class="text-danger">Lando Calresian</td>
+                        <td>83</td>
+                        <td>92</td>
+                        <td>80</td>
+                        <td>90</td>
+                        <td><input type="text" value="92" size="5" /></td>
+                        <td>92</td>
+                        <td>94</td>
+                        <td>87</td>
+                        <td>95</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- add this script to enable dropdown menu works -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

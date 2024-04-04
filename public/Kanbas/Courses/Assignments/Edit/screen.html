@@ -1,4 +1,4 @@
-<html>
+<!-- <html>
   <head> </head>
   <body>
     <table width="100%">
@@ -26,4 +26,265 @@
       includeHTML("./index.html", "assignmentEdit");
     </script>
   </body>
+</html> -->
+
+<html>
+  <head>
+    <link rel="stylesheet" href="/libs/bootstrap/bootstrap.min.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/all.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/Kanbas/styles.css" />
+    <link rel="stylesheet" href="/Kanbas/Navigation/index.css" />
+    <link rel="stylesheet" href="/Kanbas/Courses/Navigation/index.css" />
+    <link rel="stylesheet" href="/Kanbas/Courses/Assignments/Edit/index.css" />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-auto remove-nav-left-margin">
+          <ul class="wd-kanbas-navigation">
+            <li>
+              <a href="http://northeastern.edu">
+                <a href="http://northeastern.edu"
+                  ><img
+                    class="neuLogo"
+                    src="../../../../images/neuLogo.jpeg"
+                    alt="NEU Logo" /></a
+              ></a>
+            </li>
+            <li>
+              <a href="/Kanbas/Account/Profile/screen.html"
+                ><i class="fa-solid fa-user"></i>Account</a
+              >
+            </li>
+            <li>
+              <a href="/Kanbas/Dashboard/screen.html">
+                <i class="fa fa-tachometer"></i> Dashboard</a
+              >
+            </li>
+            <li class="wd-active">
+              <a href="/Kanbas/Courses/Home/screen.html"
+                ><i class="fas fa-book"></i>Courses</a
+              >
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-calendar"></i> Calendar</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-envelope"></i>Inbox</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-history"></i>History</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-paint-brush"></i>Studio</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-users"></i>Commons</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-question-circle"></i>Help</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-11">
+          <nav
+            style="--bs-breadcrumb-divider: '>'"
+            aria-label="breadcrumb"
+            class="d-none d-md-block"
+          >
+            <ol class="breadcrumb fs-4">
+              <li class="breadcrumb-item">
+                <i class="fa-solid fa-bars ms-2 me-4"></i>CS5610-02
+              </li>
+              <li class="breadcrumb-item" aria-current="page">Assignments</li>
+              <li class="breadcrumb-item active" aria-current="page">
+                A1 - ENV + HTML
+              </li>
+            </ol>
+            <hr />
+          </nav>
+
+          <div class="d-flex">
+            <div class="flex-shrink-1 me-5 course-navbar-margin-left">
+              <ul class="wd-navigation">
+                <li>
+                  <a href="/Kanbas/Courses/Home/screen.html">Home</a>
+                </li>
+                <li>
+                  <a href="/Kanbas/Courses/Modules/screen.html">Modules</a>
+                </li>
+                <li><a href="http://piazza.com">Piazza</a></li>
+                <li><a href="#">Zoom</a></li>
+                <li class="wd-active">
+                  <a href="/Kanbas/Courses/Assignments/screen.html"
+                    >Assignments</a
+                  >
+                </li>
+                <li><a href="#">Quizzes</a></li>
+                <li><a href="/Kanbas/Courses/Grades/screen.html">Grades</a></li>
+                <li><a href="#">People</a></li>
+              </ul>
+            </div>
+
+            <div class="flex-grow-1">
+              <form action="../screen.html">
+                <div
+                  class="d-flex justify-content-end align-items-center publish-bar"
+                >
+                  <i class="fa-solid fa-circle-check me-2"></i>
+                  <p class="me-4">Published</p>
+                  <i class="fa-solid fa-ellipsis-vertical publish-edit"></i>
+                </div>
+                <hr />
+
+                <h4>Assignment Name</h4>
+                <input
+                  type="text"
+                  value="A1- ENV + HTML"
+                  class="form-control"
+                />
+                <br />
+                <br />
+                <textarea name="" id="" cols="30" rows="3" class="form-control">
+This assignment describes how to install the development environment for creating andworking with Web applications we will be developing this semester. We will add newcontent every week, pushing the code to a GitHub source repository, and then deployingthe content to a remote server hosted on Netlify.
+                  </textarea
+                >
+                <br />
+                <br />
+
+                <div class="container">
+                  <div class="row mb-3">
+                    <div class="col-md-4 text-end">
+                      <label for="points" class="form-label">Points</label>
+                    </div>
+                    <div class="col-md-5">
+                      <input
+                        type="text"
+                        value="10"
+                        id="points"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="row mb-3">
+                    <div class="col-md-4 text-end">
+                      <label for="assignmentGroup" class="form-label"
+                        >Assignment Group</label
+                      >
+                    </div>
+                    <div class="col-md-5">
+                      <select
+                        name="assignmentGroup"
+                        class="form-control"
+                        id="assignmentGroup"
+                      >
+                        <option value="">ASSIGNMENTS</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="row mb-3">
+                    <div class="col-md-4 text-end">
+                      <label for="displayGrade" class="form-label"
+                        >Display Grade as</label
+                      >
+                    </div>
+                    <div class="col-md-5">
+                      <select
+                        name="displayGrade"
+                        class="form-control"
+                        id="displayGrade"
+                      >
+                        <option value="">Percentage</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="row mb-3">
+                    <div class="col-md-4 text-end">
+                      <label for="displayGrade" class="form-label"
+                        >Assign</label
+                      >
+                    </div>
+                    <div class="col-md-5 border rounded">
+                      <label for="assign-to">Assign to</label><br />
+                      <input
+                        type="text"
+                        value="Everyone"
+                        class="form-control mb-3"
+                        id="assign-to"
+                      />
+
+                      <label for="due">Due</label>
+                      <input
+                        type="date"
+                        value="2021-01-01"
+                        class="form-control mb-3"
+                        id="due"
+                      />
+
+                      <div class="d-flex">
+                        <div class="flex-grow-1 me-2">
+                          <label for="available-from">Available from</label
+                          ><br />
+                          <input
+                            type="date"
+                            value="2021-01-01"
+                            class="form-control mb-4"
+                            id="available-from"
+                          />
+                        </div>
+                        <div class="flex-grow-1">
+                          <label for="">Until</label><br />
+                          <input
+                            type="date"
+                            value="2021-01-01"
+                            class="form-control"
+                          />
+                        </div>
+                      </div>
+
+                      <a
+                        href="#"
+                        class="d-block text-center text-decoration-none text-dark add-button"
+                        >+ Add</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <hr />
+
+                <div class="d-flex">
+                  <label for="notify-user"
+                    ><input type="checkbox" id="notify-user" /> Notify users
+                    that this content has changed</label
+                  >
+                  <div class="ms-auto">
+                    <button class="btn btn-secondary">Cancel</button>
+                    <button class="btn btn-danger">Save</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
+
+<!-- <div class="d-flex">
+  <div>left Navigation****</div>
+  <div>
+    <div>top title</div>
+    <div class="d-flex">
+      <div>second navbar</div>
+      <div class="flex-grow-1">main content</div>
+    </div>
+  </div>
+</div> -->
